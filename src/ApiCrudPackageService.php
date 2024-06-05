@@ -73,7 +73,7 @@ class ApiCrudPackageService
     {
         $path_to_file  = base_path('routes/api.php');
 
-        $routesTemplate = 'Route::apiResource(\'api-' . Str::plural(Str::lower($name)) . "', '{$name}Controller'); \n";
+        $routesTemplate = 'Route::apiResource(\'' . Str::plural(Str::lower($name)) . "', '{$name}Controller'); \n";
         File::append($path_to_file, $routesTemplate);
     }
 }
